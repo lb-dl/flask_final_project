@@ -1,6 +1,4 @@
-from flask import current_app, jsonify
 from flask_restful import Resource
-from werkzeug.exceptions import BadRequest
 
 
 class TestHelloWorld(Resource):
