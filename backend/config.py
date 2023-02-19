@@ -1,13 +1,12 @@
-# Used for application config.
+import os
 import sys
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config(object):
     TESTING = False
     _IS_DEVELOPMENT = False
-
-    def register_all_api(self):
-        pass
 
     @staticmethod
     def is_development_config():
@@ -15,10 +14,11 @@ class Config(object):
 
 
 class ProductionConfig(Config):
-    DATABASE_URI = 'mysql://user@localhost/foo'
+    DATABASE_URI = 'mysql://admin:password@localhost:3306/easy_learn'
 
 
 class DevelopmentConfig(Config):
-    DATABASE_URI = 'mysql://user@localhost'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEVELOPMENT = True
 
