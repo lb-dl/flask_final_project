@@ -18,7 +18,7 @@ class ProductionConfig(Config):
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database.db')
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:password@127.0.0.1:3306/easy_learn'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEVELOPMENT = True
 

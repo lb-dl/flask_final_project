@@ -1,11 +1,8 @@
-import os
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask
 
 from config import DevelopmentConfig, ProductionConfig, Config
 from modules.database.settings import db
 from routes import Users
-
-# from backend.api.users_api import User
 
 
 app = Flask(__name__)

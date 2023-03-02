@@ -1,10 +1,6 @@
-import json
-
 from flask import jsonify, request
 
-
 from modules.database.models import User, UserSchema
-
 from modules.utils.custom_response import custom_response
 from modules.database.db_client import save, update, delete
 
