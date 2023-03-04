@@ -19,3 +19,7 @@ virtualenv==20.16.7
 Werkzeug==2.2.2
 zipp==3.10.0
 pymysql==1.0.2
+cffi==1.15.1
+cryptography==39.0.2
+pycparser==2.21
+flask_cors==3.0.10

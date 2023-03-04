@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 from config import DevelopmentConfig, ProductionConfig, Config
 from modules.database.settings import db
@@ -6,6 +7,9 @@ from routes import Users
 
 
 app = Flask(__name__)
+
+# enable CORS
+CORS(app)
 
 if debug_app := Config.is_development_config():
     app.config.from_object(DevelopmentConfig())
